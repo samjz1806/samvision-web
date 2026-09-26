@@ -1,0 +1,466 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+p {
+    font-size: 18px;
+}
+
+button {
+    background-color: #111111;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #444444;
+}
+
+img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+object-position: center 35%;
+    display: block;
+}
+
+.portada {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.texto-portada {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 90%;
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+.texto-portada h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.texto-portada h2 {
+    font-size: 25px;
+}
+
+.texto-portada button {
+    margin-top: 15px;
+}
+
+.titulo-portada {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-size: 90px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.subtitulo-portada {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 8px;
+    font-weight: normal;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.boton-portada {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    padding: 16px 35px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 30;
+}
+
+.boton-portada:hover {
+    background-color: #e5e5e5;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 50px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 100;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.links-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.links-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.links-menu a:hover {
+    opacity: 0.6;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+.portafolio {
+    padding: 100px 20px;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+.portafolio h2 {
+    font-size: 40px;
+    letter-spacing: 8px;
+    margin: 0 0 15px;
+}
+
+.portafolio p {
+    font-size: 16px;
+    color: #666;
+}
+
+.galeria {
+    max-width: 1300px;
+    margin: 60px auto 0;
+    columns: 3;
+    column-gap: 15px;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    break-inside: avoid;
+}
+
+.galeria img {
+    cursor: pointer;
+}
+
+.visor {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.visor img {
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.cerrar {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.servicios {
+    padding: 100px 20px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+.servicios h2 {
+    font-size: 40px;
+    letter-spacing: 8px;
+    margin: 0 0 15px;
+}
+
+.servicios p {
+    font-size: 16px;
+    color: #aaa;
+}
+
+.tarjetas-servicios {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.tarjeta {
+    flex: 1;
+    padding: 50px 30px;
+    border: 2px solid #555;
+    text-align: left;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Esquinas estilo visor de cámara */
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+}
+
+.tarjeta::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    border-color: white;
+}
+
+.tarjeta h3 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-top: 0;
+}
+
+.tarjeta p {
+    line-height: 1.7;
+}
+
+.boton-portada {
+    text-decoration: none;
+}
+
+.contacto {
+    padding: 100px 20px;
+    background-color: white;
+    color: #111;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 40px;
+    letter-spacing: 8px;
+    margin-bottom: 15px;
+}
+
+.contacto > p {
+    margin-bottom: 40px;
+}
+
+.contacto a {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    border: 1px solid #111;
+    color: #111;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.contacto a:hover {
+    background-color: #111;
+    color: white;
+}
+
+.contacto .telefono {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: #666;
+}
+
+.footer {
+    background-color: #080808;
+    color: white;
+    text-align: center;
+    padding: 70px 20px 30px;
+}
+
+.footer img {
+    width: 330px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 25px;
+}
+
+.footer p {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.redes-footer {
+    margin: 30px 0;
+}
+
+.redes-footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.redes-footer a:hover {
+    opacity: 0.6;
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 10px !important;
+}
+
+/* =========================
+   VERSIÓN PARA TELÉFONOS
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .menu {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .links-menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .links-menu a {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .titulo-portada {
+        font-size: 42px;
+        line-height: 1.05;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .subtitulo-portada {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+
+    .boton-portada {
+        font-size: 12px;
+        padding: 14px 22px;
+    }
+
+    .galeria {
+        columns: 1;
+    }
+
+    .portafolio h2,
+    .servicios h2,
+    .contacto h2 {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+
+    .tarjetas-servicios {
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        padding: 40px 25px;
+    }
+
+    .footer img {
+        width: 190px;
+    }
+}
